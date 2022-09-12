@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Uploadead data</title>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="/">HomePage</a></li>
+            <li><a href="/getData">GetData</a></li>
+        </ul>
+    </div>
+    <div style="display:block">
+        <div>
+            <img style="width:150px; display: flex; margin: 20px; border: 2px solid #ddd; border-radius: 4px; padding: 5px"
+                src="<%= image.imagePath %>">">
+
+            <div>
+                <h5><%= image.name %></h5>
+                <p><%= image.number %></p>
+                <p><%= image.email %></p>
+            </div>
+            <a class="btn btn-primary" href="/<%= image.id %>/edit">Edit</a>
+            <form method="POST" action="<%= image.id %>?_method=DELETE">
+                <button class="btn btn-danger" type="submit">Delete</button>
+              </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
